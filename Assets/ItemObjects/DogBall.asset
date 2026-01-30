@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf530cfcd1aad0c4b99150127e4ed79d, type: 3}
+  m_Name: DogBall
+  m_EditorClassIdentifier: 
+  name: Dog Ball
+  description: Use to call your dog. Such a good boy!
+  material: rubber
+  weight: 1
+  type: utility
+  value: 3
+  rarity: common
+  isStackable: 0
+  isConsumable: 0
+  sprite: {fileID: -805396533, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
