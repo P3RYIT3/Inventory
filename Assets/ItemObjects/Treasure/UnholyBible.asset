@@ -20,6 +20,9 @@ MonoBehaviour:
   type: utility
   value: 20
   rarity: rare
+  levelCap: 0
+  isCraftable: 0
+  isDeconstructable: 0
+  sprite: {fileID: 7108572227888925906, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
   isStackable: 1
-  isConsumable: 0
-  sprite: {fileID: -6848833688144307511, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
+  isConsumable: 1

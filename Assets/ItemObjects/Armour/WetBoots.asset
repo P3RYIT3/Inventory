@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8df4c912985f3418b6c7feca93f88e, type: 3}
+  m_Name: WetBoots
+  m_EditorClassIdentifier: 
+  name: Wet Boots
+  description: Allows you to walk on water, but does not offer any protection in
+    a fight.
+  material: leather
+  weight: 4
+  type: boots
+  value: 300
+  rarity: rare
+  levelCap: 3
+  isCraftable: 0
+  isDeconstructable: 1
+  sprite: {fileID: -3869671342528437585, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
+  enchantment:
+  - water_walking
+  condition: 100
+  defenseValue: 1
+  armourSlot: feet

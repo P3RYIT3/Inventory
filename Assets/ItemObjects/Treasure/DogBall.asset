@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf530cfcd1aad0c4b99150127e4ed79d, type: 3}
-  m_Name: BananaOfGorillaStrength
+  m_Name: DogBall
   m_EditorClassIdentifier: 
-  name: Banana of Gorilla Strength
-  description: Unleash your inner Gorilla! Increases STR by 10 and reduces INT by
-    10 when used.
-  material: banana
+  name: Dog Ball
+  description: Use to call your dog. What a good boy!
+  material: rubber
   weight: 1
-  type: buff
-  value: 500
-  rarity: rare
-  isStackable: 1
-  isConsumable: 1
-  sprite: {fileID: -726052184, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
+  type: utility
+  value: 3
+  rarity: common
+  levelCap: 0
+  isCraftable: 0
+  isDeconstructable: 1
+  sprite: {fileID: -805396533, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
+  isStackable: 0
+  isConsumable: 0
