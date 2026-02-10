@@ -15,16 +15,19 @@ public class Consumable: Item
     [SerializeField] protected int modLCK;
     [SerializeField] protected double effectTimeout;
 
-    public int[] GetStatMods()
+    public int GetHealth()
     {
-        int[] statChanges = new int[2];
-        statChanges[0] = modHealth;
-        statChanges[1] = modMana;
-        statChanges[2] = modStamina;
+        return modHealth;
+    }
 
-        return statChanges;
+    public int GetMana()
+    {
+        return modMana;
+    }
 
-        //return [modHealth, modMana, modStamina];
+    public int GetStamina()
+    {
+        return modStamina;
     }
 
     public double GetEffectTimeout()

@@ -16,7 +16,7 @@ public class Treasure: Item
     {
         return isConsumable;
     }
-
+    
     public void ChangeStats(string statName, int statValue)
     {
         

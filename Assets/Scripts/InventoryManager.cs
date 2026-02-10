@@ -9,7 +9,11 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private TMP_Text inventoryStatusText;
+    [SerializeField] private TMP_Text inventorySlotsText;
+    [SerializeField] private TMP_Text inventoryValueText;
 
+    private int usedItemSlots = 0;
+    
     public void AddItem(Item item)
     {
         if (inventory.Count < maxItemCount)
@@ -20,6 +24,8 @@ public class InventoryManager : MonoBehaviour
             itemManager.SetItem(item);
             
             inventory.Add(itemManager);
+            
+            usedItemSlots++;
         }
 
         UpdateInventoryStatusText();
@@ -27,7 +33,9 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateInventoryStatusText()
     {
-        inventoryStatusText.text = $"{CalculateInventoryWeight()} / Max";
+        inventoryStatusText.text = $"{CalculateInventoryWeight()} Stone";
+        inventorySlotsText.text = $"{usedItemSlots} / {maxItemCount}";
+        inventoryValueText.text = $"{CalculateInventoryValue()} Gold";
     }
 
     private int CalculateInventoryWeight()
@@ -40,6 +48,18 @@ public class InventoryManager : MonoBehaviour
 
         return weight;
     }
+    
+    private int CalculateInventoryValue()
+    {
+        int value = 0;
+        foreach (ItemManager itemManager in inventory)
+        {
+            value += itemManager.GetItem().GetValue();
+        }
+
+        return value;
+    }
+    
     
     //private int CalculateInventoryValue() {};
 }
