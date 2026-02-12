@@ -11,6 +11,9 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private TMP_Text inventoryStatusText;
     [SerializeField] private TMP_Text inventorySlotsText;
     [SerializeField] private TMP_Text inventoryValueText;
+    
+    [SerializeField] private CharacterManager characterManager;
+
 
     private int usedItemSlots = 0;
     
@@ -22,6 +25,8 @@ public class InventoryManager : MonoBehaviour
             
             ItemManager itemManager = itemGameObject.GetComponent<ItemManager>();
             itemManager.SetItem(item);
+            
+            itemManager.SetInventoryManager(this);
             
             inventory.Add(itemManager);
             
@@ -59,7 +64,12 @@ public class InventoryManager : MonoBehaviour
 
         return value;
     }
-    
-    
-    //private int CalculateInventoryValue() {};
+
+    public void ConsumeItem(ItemManager itemManager)
+    {
+        characterManager.UseItem(itemManager.GetItem());
+        inventory.Remove(itemManager);
+        Destroy(itemManager.gameObject);
+        UpdateInventoryStatusText();
+    }
 }
