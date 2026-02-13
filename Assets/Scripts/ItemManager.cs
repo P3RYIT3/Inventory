@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemManager : MonoBehaviour
+public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private Item item;
     private InventoryManager inventoryManager;
@@ -30,4 +31,39 @@ public class ItemManager : MonoBehaviour
     {
         return item;
     }
+
+    public interface IPointerEnterHandler : IEventSystemHandler
+    {
+        void OnPointerEnter(PointerEventData eventData);
+    }
+
+    public interface IPointerExitHandler : IEventSystemHandler
+    {
+        void OnPointerExit(PointerEventData eventData);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            inventoryManager.ShowItemDescription(item.GetDescription());
+            inventoryManager.ShowItemName(item.GetName());
+            inventoryManager.ShowItemPic(item.GetSprite());
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        inventoryManager.ShowItemDescription("");
+        inventoryManager.ShowItemName("");
+        inventoryManager.ShowItemPic(null);
+    }
+
+    public void OnDestroy()
+    {
+        inventoryManager.ShowItemDescription("");
+        inventoryManager.ShowItemName("");
+        inventoryManager.ShowItemPic(null);
+    }
+    
 }

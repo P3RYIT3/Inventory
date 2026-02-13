@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private TMP_Text inventoryStatusText;
     [SerializeField] private TMP_Text inventorySlotsText;
     [SerializeField] private TMP_Text inventoryValueText;
+    [SerializeField] private TMP_Text itemDescriptionText;
     
     [SerializeField] private CharacterManager characterManager;
 
@@ -74,5 +76,24 @@ public class InventoryManager : MonoBehaviour
         usedItemSlots--;
         
         UpdateInventoryStatusText();
+    }
+
+    public void ShowItemDescription(string description)
+    {
+        itemDescriptionText.text = $"{description}";
+    }
+
+    [SerializeField] private TMP_Text itemHoverName;
+    [SerializeField] private Button itemHoverPic;
+    
+    
+    public void ShowItemPic(Sprite sprite)
+    {
+        itemHoverPic.image.sprite = sprite;
+    }
+
+    public void ShowItemName(string name)
+    {
+        itemHoverName.text = name;
     }
 }
