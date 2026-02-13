@@ -23,8 +23,8 @@ MonoBehaviour:
   levelCap: 0
   isCraftable: 0
   isDeconstructable: 0
-  sprite: {fileID: -715206331, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
-  modHealth: -100
+  sprite: {fileID: 1713045487, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
+  modHealth: -50
   modMana: 0
   modStamina: 0
   modSTR: 0

@@ -70,6 +70,9 @@ public class InventoryManager : MonoBehaviour
         characterManager.UseItem(itemManager.GetItem());
         inventory.Remove(itemManager);
         Destroy(itemManager.gameObject);
+        
+        usedItemSlots--;
+        
         UpdateInventoryStatusText();
     }
 }

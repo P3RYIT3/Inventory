@@ -24,9 +24,9 @@ MonoBehaviour:
   isCraftable: 0
   isDeconstructable: 0
   sprite: {fileID: -726052184, guid: e2f637a2b9d6ba849bd449c547413848, type: 3}
-  modHealth: 0
+  modHealth: 20
   modMana: 0
-  modStamina: 0
+  modStamina: 20
   modSTR: 10
   modEND: 0
   modCHA: 0
